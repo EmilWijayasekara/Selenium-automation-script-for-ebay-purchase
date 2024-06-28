@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Ebay Test Automation" parallel="tests" thread-count="2">
+    <test name="Chrome Browser Test">
+        <parameter name="webBrowser" value="Chrome" />
+        <parameter name="siteURL" value="https://www.ebay.com/" />
+        <parameter name="productName" value="Mobile Phone" />
+        <parameter name="productCategory" value="Cell Phones &amp; Accessories" />
+        <parameter name="getNumberOfResults" value="5" />
+        <parameter name="productColor" value="Blue" />
+        <parameter name="productQuantity" value="1" />
+
+        <classes>
+            <class name="WebDriverConfiguration"/>
+            <class name="DirectToLandingPage"/>
+            <class name="LandingPage"/>
+            <class name="ItemPage"/>
+            <class name="ProductCartPage"/>
+            <class name="ProductCheckoutPage"/>
+        </classes>
+    </test>
+    <test name="Edge Browser Test">
+        <parameter name="webBrowser" value="Edge" />
+        <parameter name="siteURL" value="https://www.ebay.com/" />
+        <parameter name="productName" value="Mobile Phone" />
+        <parameter name="productCategory" value="Cell Phones &amp; Accessories" />
+        <parameter name="getNumberOfResults" value="5" />
+        <parameter name="productColor" value="Blue" />
+        <parameter name="productQuantity" value="1" />
+
+        <classes>
+            <class name="WebDriverConfiguration"/>
+            <class name="DirectToLandingPage"/>
+            <class name="LandingPage"/>
+            <class name="ItemPage"/>
+            <class name="ProductCartPage"/>
+            <class name="ProductCheckoutPage"/>
+        </classes>
+    </test>
+</suite>
